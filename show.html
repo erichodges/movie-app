@@ -1,0 +1,27 @@
+
+
+  <div>
+    <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}">
+    <p>
+      <a href="http://www.omdbapi.com/?i={{ details.imdbID }}">{{ details.Title }}</a> , {{ details.Year }}</p>
+    <p><strong>Released on:</strong> {{ details.Released }} ({{ details.Runtime }})</p>
+    <p>{{ details.Plot }}</p>
+    <p>
+      <div>
+        <span><strong>Directors :</strong> {{ details.Director }}</span>
+      </div>
+      <div>
+        <span><strong>Actors :</strong></span> {{ details.Actors }}
+      </div>
+      <div>
+        <span><strong>Genre :</strong></span> {{ details.Genre }}
+      </div>
+    </p>
+    <p>Ratings:
+      <br>
+      <strong>IMDb Rating</strong>: {{ details.imdbRating }}
+      <br>
+      <strong>Rotten Tomatoes</strong>: {{ details.tomatoRating }}
+    </p>
+  </div>
+
